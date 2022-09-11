@@ -20,6 +20,14 @@ class convertFormat{
             if (i > 0 && (romanNumeral.charAt(i) == 'V' || romanNumeral.charAt(i) == 'X') && romanNumeral.charAt(i - 1) == 'I') {
                 finalValue -= 2;
             }
+
+            if (i > 0 && (romanNumeral.charAt(i) == 'L' || romanNumeral.charAt(i) == 'C') && romanNumeral.charAt(i - 1) == 'X') {
+                finalValue -= 20;
+            }
+
+            if (i > 0 && (romanNumeral.charAt(i) == 'D' || romanNumeral.charAt(i) == 'M') && romanNumeral.charAt(i - 1) == 'C') {
+                finalValue -= 200;
+            }
         }
         return finalValue;
     }
